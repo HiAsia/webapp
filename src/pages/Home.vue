@@ -18,11 +18,47 @@ div.home
       div.btn
         img(src="~common/images/sprite/icon_status.png")
         |对阵数据
-
+  swiper(:options="swiperOption")
+    swiperSlide(v-for="slide in list" :key="slide.matchId")
+      |{{ slide.hostTeam }}
 </template>
 
 <script>
+// let obj = {
+//         "matchTimeStamp": 1548865800,
+//         "hostScore": 1,
+//         "guestTeamLogo": "https://s.tysondata.com/team/",
+//         "league": "塔吉克斯坦杯",
+//         "hostTeamLogo": "https://s.tysondata.com/team/",
+//         "matchState": -1,
+//         "matchTime": "2019-01-31 00:30:00",
+//         "hostTeamId": "2345077",
+//         "hostTeam": "库克涛斯",
+//         "guestTeamId": "2263996",
+//         "guestScore": 3,
+//         "round": "",
+//         "guestTeam": "维达耶",
+//         "matchId": "104910589"
+//       }
+import {swiper, swiperSlide} from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+import list from 'common/moke/soccerList.js';
 export default {
+  data () {
+    return {
+      list: list,
+      swiperOption: {　　　　　
+        // autoplay:true,//自动切换
+        // pagination: {
+        //   el: '.swiper-pagination'//分页器
+        // }
+      }
+    }
+  },
+  components: {
+    swiper,
+    swiperSlide
+  },
   methods: {
     setDefaultImg (e) {
       this.util.setDefaultImg(e, 144)
