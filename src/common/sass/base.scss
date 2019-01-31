@@ -1,0 +1,26 @@
+@import './reset.scss';
+@import './border.scss';
+.num {
+  font-family: "Times new Roman";
+}
+body {
+  font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+a {
+  text-decoration: none;
+}
+
+.fl {float: left;}
+.fr {float: right;}
+.tc {text-align: center;}
+.tl {text-align: left;}
+.tr {text-align: right;}
+.mt10{margin-top: 10px;}
+.mt15{margin-top: 15px;}
+.mb15{margin-bottom: 15px;}
+.ml10{margin-left: 10px;}
+.mr10{margin-right: 10px;}
+.fw{font-weight: bold;}
+.cr{color: $red;}
+.cb{color: $blue;}
+.cw{color: white;}
