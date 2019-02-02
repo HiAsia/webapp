@@ -6,8 +6,29 @@
 body {
   font-family:"Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
 }
+html, body {
+  height: 100%;
+}
+body {
+  background: #f2f3f4;
+}
 a {
   text-decoration: none;
+}
+.ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.clear{
+  &:after{
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
 }
 
 .fl {float: left;}

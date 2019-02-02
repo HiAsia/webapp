@@ -59,4 +59,14 @@ module.exports = {
       })
     ]
   },
+  devServer: {
+    proxy: {
+      "/api": {
+        target: "https://api.xiaomingsport.com",
+        changeOrigin: true,
+        pathRewrite: {'^/api': ''},
+        secure: false
+      }
+    }
+  }
 }
